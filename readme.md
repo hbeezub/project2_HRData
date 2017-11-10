@@ -120,8 +120,8 @@ Line 20: puts these two bar graphs together.  Let's take a moment to look at thi
 Line 21:  Now let's look at job satisfaction vs evaluation to see if there is a correlation between a good evaluation & satisfaction and a poor evaluation & dissatisfaction.  We'll start with a scatter plot, expecting to see outliers (based on the wide range of vales in data).  
 What the graph shows.  There are so many data points they basically fill the whole graph. Points are grouped on the upper right corner (high satisfaction & high evaluation) like we would expect.  However we did not expect that the high satisfaction would be also predominately grouped with 	lower evaluations as well.  In addition, there is a significant grouping of employees with high performance ratings but low job satisfaction.
 
-
-
+## Check out the Kaggle Kernel
+https://www.kaggle.com/hbeezub/project2-hrdata
                                      
 ## License
 none
