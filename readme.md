@@ -115,9 +115,11 @@ Lines 17 & 18 The data for the bar plot for employees that stayed.  My total cam
 
 Line 19: The bar plot showing satisfaction level for employees that stayed with the company.
 
+![alt text]https://github.com/hbeezub/project2_HRData/blob/master/stil_emp_bar.png
+
 Line 20: puts these two bar graphs together.  Let's take a moment to look at this graph.  Now Very dissatisfied is our largest bar for both those who left & those who are still employed.  This is partly because it contains all satisfaction scores from 0 to .61, while the other groupings only represent a 10% score distribution it still represents a "failing grade."  Of the 3571 employees who left group 2606 (73% were very dissatisfied.   The still employed dissatisfaction level also looks high on the bar card, however it constitutes 4331 of the 11428 still employed (38%).  This still seems to be a large group that is dissatisfied.
 
-![alt text]
+![alt text]https://github.com/hbeezub/project2_HRData/blob/master/stil_emp_bar.png
 
 Line 21:  Now let's look at job satisfaction vs evaluation to see if there is a correlation between a good evaluation & satisfaction and a poor evaluation & dissatisfaction.  We'll start with a scatter plot, expecting to see outliers (based on the wide range of vales in data).  
 What the graph shows.  There are so many data points they basically fill the whole graph. Points are grouped on the upper right corner (high satisfaction & high evaluation) like we would expect.  However we did not expect that the high satisfaction would be also predominately grouped with 	lower evaluations as well.  In addition, there is a significant grouping of employees with high performance ratings but low job satisfaction.
