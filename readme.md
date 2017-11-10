@@ -91,12 +91,18 @@ make sure they are different kinds - (for example a bar chart and a pie, but
 not two pies).
 
 Line10: We are ready to look at some graphs.  First let's use a pie chart to see the difference between the number of people that have left and stayed (ie not left) with the company.  To create the pie chart we want to look at the distribution of the number of people that left vs the number that stayed.  A 1 means the person left/quit so 3,571 quit (24%).  A 0 indicates someone still with the company 11,428 (76%).
+
 Line11: So here is our code for the pie chart.  We assign labels that correspond to our numbers.  The autopct (autopercent) formats how the percentages show in our pie chart.  I don't want decimals.  The startangle tells us "where" to start the first line.  The first "slice is at a 90 degree angle starting at the top.  I've added plt.axis("equal")  to make our pie chart appear round.  There is a correlation between the monitor resolution and the pixels used for the graph.  This causes the pie to appear oval instead of round.  To force the pie to be round, we use the plt.axis("equal") .  This is much more appealing to our eyes.  "disconnect between the makes our pie chart look round.    I've increased the size of the pie chart using the first 2 lines fig = plt.figure(figsize=(10,6)) and ax = fig.add_axes((0,0,.5,1)).
+
+![alt text](https://github.com/hbeezub/project2_HRData/blob/master/pie.png)
+
 What our graph shows:  Now that we have a graph one of our initial assumptions (that because people stayed for a minimum of 2 years) that turnover was low is found to be incorrect.  A 25% turnover is pretty high.  Typically, you may have a department or two with high turnover, but is should be greatly reduced when looking at the entire organization. 
 
 Line 12:  Now let's look to see if there is a correlation between those that are leaving and job satisfaction.  I'd like to have a bar graph (but I was finding it hard to make).  I was able to make a graph of the total satisfaction levels among all employees. This Histogram gives an idea of the data distribution.
 
-Line13: In order to make a bar graph we have to first group or data so that matplotlib can make the bar graph.  First, we'll divide into 2 groups for left/not left.
+![alt text](https://github.com/hbeezub/project2_HRData/blob/master/histogram.png)
+
+Line 13: In order to make a bar graph we have to first group or data so that matplotlib can make the bar graph.  First, we'll divide into 2 groups for left/not left.
 
 Line 14: We have multiple vales for job satisfaction that range from 9% to 100%.  We will need to group the percentages together.  We'll use a "typical" 10% grading scale: 
 91-100 =A,  greater than 91% Extremely Satisfied
@@ -109,20 +115,25 @@ Through some searching & trail & error I figured out how to group these into my 
 	
 Line 15:  Figuring out how to get the counts for these proved even trickier.  I tried in vain to use value_counts() in an amazing number of configurations before I stumbled onto just using count(). (An entire evening of stumbling).  I was unsuccessful in just getting only the 'left' column to show though.  This did give me the numbers I needed to be able to make my bar plot.  The numbers added to the 3571 employees that left so the numbers check out. You can look at my "ugly" Jupiter notebook if you want to see some of the codes I tried. (I didn't start keeping track at the start).
 
-Line 16:  The bar plot showing satisfaction level for employees that left (Success at making a bar graph in matplotlib)
+Line 16:  The bar plot showing satisfaction level for employees that left (Success at making a bar graph in matplotlib).
+
+![alt text](https://github.com/hbeezub/project2_HRData/blob/master/left_bar.png)
 
 Lines 17 & 18 The data for the bar plot for employees that stayed.  My total came to 11428 so my numbers match.
 
 Line 19: The bar plot showing satisfaction level for employees that stayed with the company.
 
-![alt text](https://github.com/hbeezub/project2_HRData/blob/master/stil_emp_bar.png)
+![alt text](https://github.com/hbeezub/project2_HRData/blob/master/still_emp_bar.png)
 
 Line 20: puts these two bar graphs together.  Let's take a moment to look at this graph.  Now Very dissatisfied is our largest bar for both those who left & those who are still employed.  This is partly because it contains all satisfaction scores from 0 to .61, while the other groupings only represent a 10% score distribution it still represents a "failing grade."  Of the 3571 employees who left group 2606 (73% were very dissatisfied.   The still employed dissatisfaction level also looks high on the bar card, however it constitutes 4331 of the 11428 still employed (38%).  This still seems to be a large group that is dissatisfied.
 
-![alt text]https://github.com/hbeezub/project2_HRData/blob/master/stil_emp_bar.png
+![alt text](https://github.com/hbeezub/project2_HRData/blob/master/bar_2.png)
 
 Line 21:  Now let's look at job satisfaction vs evaluation to see if there is a correlation between a good evaluation & satisfaction and a poor evaluation & dissatisfaction.  We'll start with a scatter plot, expecting to see outliers (based on the wide range of vales in data).  
 What the graph shows.  There are so many data points they basically fill the whole graph. Points are grouped on the upper right corner (high satisfaction & high evaluation) like we would expect.  However we did not expect that the high satisfaction would be also predominately grouped with 	lower evaluations as well.  In addition, there is a significant grouping of employees with high performance ratings but low job satisfaction.
+
+
+![alt text](https://github.com/hbeezub/project2_HRData/blob/master/scatter.png)
 
 ## Check out the Kaggle Kernel
 https://www.kaggle.com/hbeezub/project2-hrdata
